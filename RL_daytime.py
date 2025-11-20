@@ -347,7 +347,7 @@ class OCamController:
 
 class RewardCalculator:
     def __init__(self, a=1.0, b=0.3, c=0.015, d=5.0, e=0.1, f=0.03, 
-                 mu_target=115, clip_range=(-50, 10)):
+                 mu_target=119, clip_range=(-50, 10)):
         self.a = a  # Weight for Sharpness
         self.b = b  # Weight for Entropy
         self.c = c  # Weight for Brightness deviation penalty

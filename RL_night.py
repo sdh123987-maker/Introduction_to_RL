@@ -351,7 +351,7 @@ class RewardCalculator:
     def __init__(self, a=1.0, b=0.3, 
                  c=0.01,      # [TUNED] Reduced brightness penalty (0.015 -> 0.01)
                  d=5.0, e=0.1, f=0.03, 
-                 mu_target=95, # [TUNED] Lower target for night (115 -> 95)
+                 mu_target=100, # [TUNED] Lower target for night (119 -> 100)
                  clip_range=(-50, 10)):
         self.a = a  # Weight for Sharpness
         self.b = b  # Weight for Entropy
