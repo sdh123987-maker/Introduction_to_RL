@@ -14,8 +14,6 @@ To solve this, we implemented a **Neural-LinUCB (Deep Contextual Bandit)** algor
 - **Control Exposure Actively:** Selects the optimal exposure time to maximize image information and minimize control instability.
 - **Overcome Hardware Limits:** Effectively handles physical shutter speed constraints in abrupt light transitioning environments.
 
----
-
 ## 2. Hardware & Software Requirements
 
 ### Hardware
@@ -25,8 +23,6 @@ To solve this, we implemented a **Neural-LinUCB (Deep Contextual Bandit)** algor
 ### Software Dependencies
 This project requires **Python 3.8+**.
 Key libraries: PyTorch, OpenCV, NumPy, Pandas, Matplotlib
-
----
 
 ## 3. Installation
 
