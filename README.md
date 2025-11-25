@@ -15,7 +15,29 @@
 
 > **Topic:** Real-time Auto Exposure Control System using Reinforcement Learning (Neural-LinUCB)
 
-## 1. Project Overview
+---
+
+## 1. Motivation: Why is AE Critical?
+Before discussing the solution, here is why fast Auto-Exposure (AE) is vital for safety.
+
+<p align="center">
+  <video src="미디어1.mp4" width="80%" autoplay loop muted></video>
+  <br>
+  <em><strong>Figure 1.</strong> Sudden light changes in tunnels can cause fatal tracking failures in autonomous systems.</em>
+</p>
+
+## 2. Problem Definition: The "Blind Frame"
+Traditional PID-based AE systems fail to adapt quickly to abrupt transitions (e.g., entering/exiting tunnels). This lag creates **"Blind Frames"**—periods where the image is either completely black (under-exposed) or white (over-exposed), making object detection impossible.
+
+<p align="center">
+  <img src="그림1.png" width="95%">
+  <br>
+  [cite_start]<em><strong>Figure 2.</strong> Conventional Built-in AE results in a long sequence of blind frames[cite: 5].</em>
+</p>
+
+---
+
+## 3. Project Overview
 
 This project addresses the instability of auto-exposure (AE) systems in robotics under drastic lighting changes. Traditional PID-based AE often fails to adapt quickly to abrupt transitions (e.g., lights turning on/off), leading to "blind" frames where visual information is lost.
 
@@ -25,7 +47,7 @@ To solve this, we implemented a **Neural-LinUCB (Deep Contextual Bandit)** algor
 - **Control Exposure Actively:** Selects the optimal exposure time to maximize image information and minimize control instability.
 - **Overcome Hardware Limits:** Effectively handles physical shutter speed constraints in abrupt light transitioning environments.
 
-## 2. Hardware & Software Requirements
+## 4. Hardware & Software Requirements
 
 ### Hardware
 - **Camera:** oCam-1MGN-U-T (Global Shutter USB Camera)
@@ -35,7 +57,22 @@ To solve this, we implemented a **Neural-LinUCB (Deep Contextual Bandit)** algor
 This project requires **Python 3.8+**.
 Key libraries: PyTorch, OpenCV, NumPy, Pandas, Matplotlib
 
-## 3. Installation
+---
+
+## 5. Experimental Results (Demo)
+
+We compared the performance of our **Neural-LinUCB** agent against the built-in **Standard AE**.
+
+| **Baseline (Standard AE)** | **Ours (Neural-LinUCB)** |
+|:--------------------------:|:------------------------:|
+| <video src="미디어3.mp4" width="100%" autoplay loop muted></video> | <video src="미디어4.mp4" width="100%" autoplay loop muted></video> |
+| **Fail:** Slow adaptation, Motion blur occurs | **Success:** Fast recovery, Sharp edges maintained |
+
+> **Result:** The Neural-LinUCB agent recovers optimal exposure **3x faster** than standard AE and significantly reduces blind frames (up to 93%) during abrupt light changes.
+
+---
+
+## 6. Installation
 
 ### Step 1. Clone the Repository
 ```bash
@@ -46,7 +83,7 @@ cd Intoroduction-to-RL
 ```bash
 pip install numpy opencv-python torch pandas matplotlib
 ```
-## 4. How to Run
+## 7. How to Run
 
 ### Step 1. Connect Camera & Run Control Loop
 Connect the oCam to your USB port and execute the main RL script.
@@ -76,14 +113,14 @@ Note: Ensure the csv filename in the script matches your generated log file.
 ```bash
 python plot.py
 ```
-## 5. Key Features
+## 8. Key Features
 Deep Representation Learning: Neural encoder maps high-dimensional image statistics to a latent state.
 
 Contextual Bandit (LinUCB): Balances exploration and exploitation for exposure selection.
 
 Safety Mechanism: Prevents penalty accumulation when hardware exposure limits are reached.
 
-## 6. Trained Models
+## 9. Trained Models
 
 The trained agent consists of two key files. Both are required to load the model.
 
