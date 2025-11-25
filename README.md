@@ -1,14 +1,3 @@
-
-<img width="1922" height="328" alt="image" src="https://github.com/user-attachments/assets/97d98ade-73e0-4b03-b93c-3c3e1431ab62" />
-
-
-<img width="590" height="708" alt="image" src="https://github.com/user-attachments/assets/8bba3d95-1b3d-4a60-8701-2237fbcec501" />
-
-<img width="889" height="500" alt="image" src="https://github.com/user-attachments/assets/45d6d416-ad0e-4dda-a52b-8d5f2221c05b" />
-
-<img width="889" height="500" alt="image" src="https://github.com/user-attachments/assets/ef290136-3ecc-4431-958c-a91ff09adce0" />
-
-
 # Neural-LinUCB Auto Exposure Control for oCam
 
 > **2025 Introduction to Reinforcement Learning Project**
@@ -21,18 +10,18 @@
 Before discussing the solution, here is why fast Auto-Exposure (AE) is vital for safety.
 
 <p align="center">
-  <video src="미디어1.mp4" width="80%" autoplay loop muted></video>
+  <img src="assets/tunnel_motivation.gif" width="80%">
   <br>
-  <em><strong>Figure 1.</strong> Sudden light changes in tunnels can cause fatal tracking failures in autonomous systems.</em>
+  <em><strong>Figure 1.</strong> Real-world example: Delayed exposure adaptation in a tunnel can lead to dangerous blind moments.</em>
 </p>
 
 ## 2. Problem Definition: The "Blind Frame"
-Traditional PID-based AE systems fail to adapt quickly to abrupt transitions (e.g., entering/exiting tunnels). This lag creates **"Blind Frames"**—periods where the image is either completely black (under-exposed) or white (over-exposed), making object detection impossible.
+Traditional PID-based AE systems fail to adapt quickly to abrupt transitions. This lag creates **"Blind Frames"**—periods where the image is either completely black (under-exposed) or white (over-exposed), making object detection (YOLO) impossible.
 
 <p align="center">
-  <img src="그림1.png" width="95%">
+  <img src="assets/problem_definition.png" width="95%">
   <br>
-  [cite_start]<em><strong>Figure 2.</strong> Conventional Built-in AE results in a long sequence of blind frames[cite: 5].</em>
+  <em><strong>Figure 2.</strong> Conventional Built-in AE results in a long sequence of blind frames where objects disappear.</em>
 </p>
 
 ---
@@ -61,11 +50,11 @@ Key libraries: PyTorch, OpenCV, NumPy, Pandas, Matplotlib
 
 ## 5. Experimental Results (Demo)
 
-We compared the performance of our **Neural-LinUCB** agent against the built-in **Standard AE**.
+We compared the performance of our **Neural-LinUCB** agent against the built-in **Standard AE** in a dynamic environment (lights turning on/off).
 
 | **Baseline (Standard AE)** | **Ours (Neural-LinUCB)** |
 |:--------------------------:|:------------------------:|
-| <video src="미디어3.mp4" width="100%" autoplay loop muted></video> | <video src="미디어4.mp4" width="100%" autoplay loop muted></video> |
+| <img src="assets/result_baseline.gif" width="100%"> | <img src="assets/result_ours.gif" width="100%"> |
 | **Fail:** Slow adaptation, Motion blur occurs | **Success:** Fast recovery, Sharp edges maintained |
 
 > **Result:** The Neural-LinUCB agent recovers optimal exposure **3x faster** than standard AE and significantly reduces blind frames (up to 93%) during abrupt light changes.
