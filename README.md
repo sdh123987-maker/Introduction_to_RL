@@ -6,11 +6,11 @@
 
 ---
 
-## 1. Motivation: Why is AE Critical?
-Before discussing the solution, here is why fast Auto-Exposure (AE) is vital for safety.
+## 1. Motivation: Why is AEC Critical?
+Before discussing the solution, here is why fast Auto-Exposure-Control (AEC) is vital for safety.
 
 <p align="center">
-  <img src="assets/tunnel_motivation.gif" width="80%">
+  <img src="assets/tunnel_motivation.gif" width="40%">
   <br>
   <em><strong>Figure 1.</strong> Real-world example: Delayed exposure adaptation in a tunnel can lead to dangerous blind moments.</em>
 </p>
@@ -54,7 +54,7 @@ We compared the performance of our **Neural-LinUCB** agent against the built-in 
 
 | **Baseline (Standard AE)** | **Ours (Neural-LinUCB)** |
 |:--------------------------:|:------------------------:|
-| <img src="assets/result_baseline.gif" width="100%"> | <img src="assets/result_ours.gif" width="100%"> |
+| <img src="assets/result_base.gif" width="100%"> | <img src="assets/result_ours.gif" width="100%"> |
 | **Fail:** Slow adaptation, Motion blur occurs | **Success:** Fast recovery, Sharp edges maintained |
 
 > **Result:** The Neural-LinUCB agent recovers optimal exposure **3x faster** than standard AE and significantly reduces blind frames (up to 93%) during abrupt light changes.
