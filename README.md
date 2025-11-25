@@ -6,8 +6,8 @@
 
 ---
 
-## 1. Motivation: Why is AE Critical?
-Before discussing the solution, here is why fast Auto-Exposure (AE) is vital for safety.
+## 1. Motivation: Why is AEC Critical?
+Before discussing the solution, here is why fast Auto-Exposure-Control (AEC) is vital for safety.
 
 <p align="center">
   <img src="assets/tunnel_motivation.gif" width="40%">
