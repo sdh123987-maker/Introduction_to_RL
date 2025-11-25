@@ -10,7 +10,7 @@
 Before discussing the solution, here is why fast Auto-Exposure (AE) is vital for safety.
 
 <p align="center">
-  <img src="assets/tunnel_motivation.gif" width="80%">
+  <img src="assets/tunnel_motivation.gif" width="40%">
   <br>
   <em><strong>Figure 1.</strong> Real-world example: Delayed exposure adaptation in a tunnel can lead to dangerous blind moments.</em>
 </p>
