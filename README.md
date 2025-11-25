@@ -54,7 +54,7 @@ We compared the performance of our **Neural-LinUCB** agent against the built-in 
 
 | **Baseline (Standard AE)** | **Ours (Neural-LinUCB)** |
 |:--------------------------:|:------------------------:|
-| <img src="assets/result_baseline.gif" width="100%"> | <img src="assets/result_ours.gif" width="100%"> |
+| <img src="assets/result_base.gif" width="100%"> | <img src="assets/result_ours.gif" width="100%"> |
 | **Fail:** Slow adaptation, Motion blur occurs | **Success:** Fast recovery, Sharp edges maintained |
 
 > **Result:** The Neural-LinUCB agent recovers optimal exposure **3x faster** than standard AE and significantly reduces blind frames (up to 93%) during abrupt light changes.
