@@ -1,3 +1,14 @@
+
+<img width="1922" height="328" alt="image" src="https://github.com/user-attachments/assets/97d98ade-73e0-4b03-b93c-3c3e1431ab62" />
+
+
+<img width="590" height="708" alt="image" src="https://github.com/user-attachments/assets/8bba3d95-1b3d-4a60-8701-2237fbcec501" />
+
+<img width="889" height="500" alt="image" src="https://github.com/user-attachments/assets/45d6d416-ad0e-4dda-a52b-8d5f2221c05b" />
+
+<img width="889" height="500" alt="image" src="https://github.com/user-attachments/assets/ef290136-3ecc-4431-958c-a91ff09adce0" />
+
+
 # Neural-LinUCB Auto Exposure Control for oCam
 
 > **2025 Introduction to Reinforcement Learning Project**
