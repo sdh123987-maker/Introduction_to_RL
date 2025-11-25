@@ -19,7 +19,7 @@ Before discussing the solution, here is why fast Auto-Exposure (AE) is vital for
 Traditional PID-based AE systems fail to adapt quickly to abrupt transitions. This lag creates **"Blind Frames"**—periods where the image is either completely black (under-exposed) or white (over-exposed), making object detection (YOLO) impossible.
 
 <p align="center">
-  <img src="assets/problem_definition.png" width="95%">
+  <img src="assets/problem_definition.png.png" width="95%">
   <br>
   <em><strong>Figure 2.</strong> Conventional Built-in AE results in a long sequence of blind frames where objects disappear.</em>
 </p>
@@ -54,7 +54,7 @@ We compared the performance of our **Neural-LinUCB** agent against the built-in 
 
 | **Baseline (Standard AE)** | **Ours (Neural-LinUCB)** |
 |:--------------------------:|:------------------------:|
-| <img src="assets/result_baseline.gif" width="100%"> | <img src="assets/result_ours.gif" width="100%"> |
+| <img src="assets/result_baseline.gif" width="100%"> | <img src="assets/result_ours..gif.gif" width="100%"> |
 | **Fail:** Slow adaptation, Motion blur occurs | **Success:** Fast recovery, Sharp edges maintained |
 
 > **Result:** The Neural-LinUCB agent recovers optimal exposure **3x faster** than standard AE and significantly reduces blind frames (up to 93%) during abrupt light changes.
